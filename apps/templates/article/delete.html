@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block contents %}
+	<div class ="llArticleCreate">
+		<div class="alert alert-warning alert-dismissible" role="alert">
+			<button type="button" class="close" data-dismiss="alert">
+				<span aria-hidden="true">&times;</span>
+			</button>
+			<strong>경고!</strong>글이 완전히 삭제되니, 다시 확인!
+		</div>
+
+		<form role="form" method="post">
+			<input type="hidden" name="article_id" value="{{article_id}}">
+			<button type="submit" class="btn btn-danger">글삭제</button>
+		</form>
+	</div>
+{% endblock %}
